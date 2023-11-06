@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <p id = "caro"></p>
+  <button id="change" onclick="change()">change value</button>
+  <script>
+    let arr =[];
+    let data = "";
+    for (let i = 0; i <5 ; i++) {
+      arr.push([0, 0, 0, 0, 0]);
+    }
+    for (let i = 0; i < 5; i++) {
+      data += "<br>";
+      for (let j = 0; j < 5; j++) {
+        data += arr[i][j] + " &nbsp;";
+      }
+    }
+    function change(){
+        let x = +prompt("X: ");
+        let y = +prompt("X: ");
+        arr[x][y] = "x";
+        let data = "";
+        for (let i = 0; i < 5; i++) {
+            data += "<br>"
+            for (let j = 0; j < 5; j++) {
+                data += arr[i][j] + "&nbsp;&nbsp";
+            }
+
+        }
+        document.getElementById("caro").innerHTML = data;
+    }
+    document.getElementById("caro").innerHTML = data;
+  </script>
+</body>
+</html>
